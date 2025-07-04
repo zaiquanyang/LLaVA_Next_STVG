@@ -1,0 +1,183 @@
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:00,  6.50it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00,  6.47it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:00<00:00,  6.47it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00,  5.71it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00,  5.97it/s]
+`torch.nn.functional.scaled_dot_product_attention` does not support `output_attentions=True`. Falling back to eager attention. This warning can be removed using the argument `attn_implementation="eager"` when loading the model.
+From v4.47 onwards, when a model cache is to be returned, `generate` will return a `Cache` instance instead by default (as opposed to the legacy tuple of tuples format). If you want to keep returning the legacy format, please set `return_legacy_cache=True`.
+Traceback (most recent call last):
+  File "/gpfs1/scratch/zaiquyang2/mllm/LLaVA-NeXT/custom_infer/STVG/hc_sharegpt4video.py", line 233, in run_inference
+    bbox_pred_tmp, temporal_pred_tmp, _ = st_tuning_module.llava_embedd_tuning(
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/STVG/Sharegpt4video/st_tuning_focus_whole.py", line 164, in llava_embedd_tuning
+    bbox_pred_tmp, temporal_pred_tmp, gt_viou = ttt_eval(targets, llava_rela_att, vid_i, preprocess, contrastive_content, spatial_pred, args, save=False)
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/utils.py", line 207, in ttt_eval
+    bbox_pred_tmp, temporal_pred_tmp, pred_track_ID, pred_actionness, v_iou, gt_viou = evaluation_llava_att(
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/STVG/datasets/evaluation/hcstvg_eval.py", line 262, in evaluation_llava_att
+    proposal_max_v_, proposal_max_frame_ID = torch.max(proposal_llava_pred_max, dim=1)
+IndexError: Dimension out of range (expected to be in range of [-1, 0], but got 1)
+Traceback (most recent call last):
+  File "/gpfs1/scratch/zaiquyang2/mllm/LLaVA-NeXT/custom_infer/STVG/hc_sharegpt4video.py", line 233, in run_inference
+    bbox_pred_tmp, temporal_pred_tmp, _ = st_tuning_module.llava_embedd_tuning(
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/STVG/Sharegpt4video/st_tuning_focus_whole.py", line 164, in llava_embedd_tuning
+    bbox_pred_tmp, temporal_pred_tmp, gt_viou = ttt_eval(targets, llava_rela_att, vid_i, preprocess, contrastive_content, spatial_pred, args, save=False)
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/utils.py", line 207, in ttt_eval
+    bbox_pred_tmp, temporal_pred_tmp, pred_track_ID, pred_actionness, v_iou, gt_viou = evaluation_llava_att(
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/STVG/datasets/evaluation/hcstvg_eval.py", line 262, in evaluation_llava_att
+    proposal_max_v_, proposal_max_frame_ID = torch.max(proposal_llava_pred_max, dim=1)
+IndexError: Dimension out of range (expected to be in range of [-1, 0], but got 1)
+Traceback (most recent call last):
+  File "/gpfs1/scratch/zaiquyang2/mllm/LLaVA-NeXT/custom_infer/STVG/hc_sharegpt4video.py", line 233, in run_inference
+    bbox_pred_tmp, temporal_pred_tmp, _ = st_tuning_module.llava_embedd_tuning(
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/STVG/Sharegpt4video/st_tuning_focus_whole.py", line 164, in llava_embedd_tuning
+    bbox_pred_tmp, temporal_pred_tmp, gt_viou = ttt_eval(targets, llava_rela_att, vid_i, preprocess, contrastive_content, spatial_pred, args, save=False)
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/utils.py", line 207, in ttt_eval
+    bbox_pred_tmp, temporal_pred_tmp, pred_track_ID, pred_actionness, v_iou, gt_viou = evaluation_llava_att(
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/STVG/datasets/evaluation/hcstvg_eval.py", line 262, in evaluation_llava_att
+    proposal_max_v_, proposal_max_frame_ID = torch.max(proposal_llava_pred_max, dim=1)
+IndexError: Dimension out of range (expected to be in range of [-1, 0], but got 1)
+Traceback (most recent call last):
+  File "/gpfs1/scratch/zaiquyang2/mllm/LLaVA-NeXT/custom_infer/STVG/hc_sharegpt4video.py", line 233, in run_inference
+    bbox_pred_tmp, temporal_pred_tmp, _ = st_tuning_module.llava_embedd_tuning(
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/STVG/Sharegpt4video/st_tuning_focus_whole.py", line 164, in llava_embedd_tuning
+    bbox_pred_tmp, temporal_pred_tmp, gt_viou = ttt_eval(targets, llava_rela_att, vid_i, preprocess, contrastive_content, spatial_pred, args, save=False)
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/utils.py", line 207, in ttt_eval
+    bbox_pred_tmp, temporal_pred_tmp, pred_track_ID, pred_actionness, v_iou, gt_viou = evaluation_llava_att(
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/STVG/datasets/evaluation/hcstvg_eval.py", line 262, in evaluation_llava_att
+    proposal_max_v_, proposal_max_frame_ID = torch.max(proposal_llava_pred_max, dim=1)
+IndexError: Dimension out of range (expected to be in range of [-1, 0], but got 1)
+Traceback (most recent call last):
+  File "/gpfs1/scratch/zaiquyang2/mllm/LLaVA-NeXT/custom_infer/STVG/hc_sharegpt4video.py", line 233, in run_inference
+    bbox_pred_tmp, temporal_pred_tmp, _ = st_tuning_module.llava_embedd_tuning(
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/STVG/Sharegpt4video/st_tuning_focus_whole.py", line 164, in llava_embedd_tuning
+    bbox_pred_tmp, temporal_pred_tmp, gt_viou = ttt_eval(targets, llava_rela_att, vid_i, preprocess, contrastive_content, spatial_pred, args, save=False)
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/utils.py", line 207, in ttt_eval
+    bbox_pred_tmp, temporal_pred_tmp, pred_track_ID, pred_actionness, v_iou, gt_viou = evaluation_llava_att(
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/STVG/datasets/evaluation/hcstvg_eval.py", line 262, in evaluation_llava_att
+    proposal_max_v_, proposal_max_frame_ID = torch.max(proposal_llava_pred_max, dim=1)
+IndexError: Dimension out of range (expected to be in range of [-1, 0], but got 1)
+Traceback (most recent call last):
+  File "/gpfs1/scratch/zaiquyang2/mllm/LLaVA-NeXT/custom_infer/STVG/hc_sharegpt4video.py", line 233, in run_inference
+    bbox_pred_tmp, temporal_pred_tmp, _ = st_tuning_module.llava_embedd_tuning(
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/STVG/Sharegpt4video/st_tuning_focus_whole.py", line 164, in llava_embedd_tuning
+    bbox_pred_tmp, temporal_pred_tmp, gt_viou = ttt_eval(targets, llava_rela_att, vid_i, preprocess, contrastive_content, spatial_pred, args, save=False)
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/utils.py", line 207, in ttt_eval
+    bbox_pred_tmp, temporal_pred_tmp, pred_track_ID, pred_actionness, v_iou, gt_viou = evaluation_llava_att(
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/STVG/datasets/evaluation/hcstvg_eval.py", line 262, in evaluation_llava_att
+    proposal_max_v_, proposal_max_frame_ID = torch.max(proposal_llava_pred_max, dim=1)
+IndexError: Dimension out of range (expected to be in range of [-1, 0], but got 1)
+Traceback (most recent call last):
+  File "/gpfs1/scratch/zaiquyang2/mllm/LLaVA-NeXT/custom_infer/STVG/hc_sharegpt4video.py", line 233, in run_inference
+    bbox_pred_tmp, temporal_pred_tmp, _ = st_tuning_module.llava_embedd_tuning(
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/STVG/Sharegpt4video/st_tuning_focus_whole.py", line 164, in llava_embedd_tuning
+    bbox_pred_tmp, temporal_pred_tmp, gt_viou = ttt_eval(targets, llava_rela_att, vid_i, preprocess, contrastive_content, spatial_pred, args, save=False)
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/utils.py", line 207, in ttt_eval
+    bbox_pred_tmp, temporal_pred_tmp, pred_track_ID, pred_actionness, v_iou, gt_viou = evaluation_llava_att(
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/STVG/datasets/evaluation/hcstvg_eval.py", line 262, in evaluation_llava_att
+    proposal_max_v_, proposal_max_frame_ID = torch.max(proposal_llava_pred_max, dim=1)
+IndexError: Dimension out of range (expected to be in range of [-1, 0], but got 1)
+Traceback (most recent call last):
+  File "/gpfs1/scratch/zaiquyang2/mllm/LLaVA-NeXT/custom_infer/STVG/hc_sharegpt4video.py", line 233, in run_inference
+    bbox_pred_tmp, temporal_pred_tmp, _ = st_tuning_module.llava_embedd_tuning(
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/STVG/Sharegpt4video/st_tuning_focus_whole.py", line 164, in llava_embedd_tuning
+    bbox_pred_tmp, temporal_pred_tmp, gt_viou = ttt_eval(targets, llava_rela_att, vid_i, preprocess, contrastive_content, spatial_pred, args, save=False)
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/utils.py", line 207, in ttt_eval
+    bbox_pred_tmp, temporal_pred_tmp, pred_track_ID, pred_actionness, v_iou, gt_viou = evaluation_llava_att(
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/STVG/datasets/evaluation/hcstvg_eval.py", line 262, in evaluation_llava_att
+    proposal_max_v_, proposal_max_frame_ID = torch.max(proposal_llava_pred_max, dim=1)
+IndexError: Dimension out of range (expected to be in range of [-1, 0], but got 1)
+Traceback (most recent call last):
+  File "/gpfs1/scratch/zaiquyang2/mllm/LLaVA-NeXT/custom_infer/STVG/hc_sharegpt4video.py", line 233, in run_inference
+    bbox_pred_tmp, temporal_pred_tmp, _ = st_tuning_module.llava_embedd_tuning(
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/STVG/Sharegpt4video/st_tuning_focus_whole.py", line 164, in llava_embedd_tuning
+    bbox_pred_tmp, temporal_pred_tmp, gt_viou = ttt_eval(targets, llava_rela_att, vid_i, preprocess, contrastive_content, spatial_pred, args, save=False)
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/utils.py", line 207, in ttt_eval
+    bbox_pred_tmp, temporal_pred_tmp, pred_track_ID, pred_actionness, v_iou, gt_viou = evaluation_llava_att(
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/STVG/datasets/evaluation/hcstvg_eval.py", line 262, in evaluation_llava_att
+    proposal_max_v_, proposal_max_frame_ID = torch.max(proposal_llava_pred_max, dim=1)
+IndexError: Dimension out of range (expected to be in range of [-1, 0], but got 1)
+Traceback (most recent call last):
+  File "/gpfs1/scratch/zaiquyang2/mllm/LLaVA-NeXT/custom_infer/STVG/hc_sharegpt4video.py", line 233, in run_inference
+    bbox_pred_tmp, temporal_pred_tmp, _ = st_tuning_module.llava_embedd_tuning(
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/STVG/Sharegpt4video/st_tuning_focus_whole.py", line 164, in llava_embedd_tuning
+    bbox_pred_tmp, temporal_pred_tmp, gt_viou = ttt_eval(targets, llava_rela_att, vid_i, preprocess, contrastive_content, spatial_pred, args, save=False)
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/utils.py", line 207, in ttt_eval
+    bbox_pred_tmp, temporal_pred_tmp, pred_track_ID, pred_actionness, v_iou, gt_viou = evaluation_llava_att(
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/STVG/datasets/evaluation/hcstvg_eval.py", line 262, in evaluation_llava_att
+    proposal_max_v_, proposal_max_frame_ID = torch.max(proposal_llava_pred_max, dim=1)
+IndexError: Dimension out of range (expected to be in range of [-1, 0], but got 1)
+Traceback (most recent call last):
+  File "/gpfs1/scratch/zaiquyang2/mllm/LLaVA-NeXT/custom_infer/STVG/hc_sharegpt4video.py", line 233, in run_inference
+    bbox_pred_tmp, temporal_pred_tmp, _ = st_tuning_module.llava_embedd_tuning(
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/STVG/Sharegpt4video/st_tuning_focus_whole.py", line 164, in llava_embedd_tuning
+    bbox_pred_tmp, temporal_pred_tmp, gt_viou = ttt_eval(targets, llava_rela_att, vid_i, preprocess, contrastive_content, spatial_pred, args, save=False)
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/utils.py", line 207, in ttt_eval
+    bbox_pred_tmp, temporal_pred_tmp, pred_track_ID, pred_actionness, v_iou, gt_viou = evaluation_llava_att(
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/STVG/datasets/evaluation/hcstvg_eval.py", line 262, in evaluation_llava_att
+    proposal_max_v_, proposal_max_frame_ID = torch.max(proposal_llava_pred_max, dim=1)
+IndexError: Dimension out of range (expected to be in range of [-1, 0], but got 1)
+Traceback (most recent call last):
+  File "/gpfs1/scratch/zaiquyang2/mllm/LLaVA-NeXT/custom_infer/STVG/hc_sharegpt4video.py", line 233, in run_inference
+    bbox_pred_tmp, temporal_pred_tmp, _ = st_tuning_module.llava_embedd_tuning(
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/STVG/Sharegpt4video/st_tuning_focus_whole.py", line 164, in llava_embedd_tuning
+    bbox_pred_tmp, temporal_pred_tmp, gt_viou = ttt_eval(targets, llava_rela_att, vid_i, preprocess, contrastive_content, spatial_pred, args, save=False)
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/utils.py", line 207, in ttt_eval
+    bbox_pred_tmp, temporal_pred_tmp, pred_track_ID, pred_actionness, v_iou, gt_viou = evaluation_llava_att(
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/STVG/datasets/evaluation/hcstvg_eval.py", line 262, in evaluation_llava_att
+    proposal_max_v_, proposal_max_frame_ID = torch.max(proposal_llava_pred_max, dim=1)
+IndexError: Dimension out of range (expected to be in range of [-1, 0], but got 1)
+Traceback (most recent call last):
+  File "/gpfs1/scratch/zaiquyang2/mllm/LLaVA-NeXT/custom_infer/STVG/hc_sharegpt4video.py", line 233, in run_inference
+    bbox_pred_tmp, temporal_pred_tmp, _ = st_tuning_module.llava_embedd_tuning(
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/STVG/Sharegpt4video/st_tuning_focus_whole.py", line 164, in llava_embedd_tuning
+    bbox_pred_tmp, temporal_pred_tmp, gt_viou = ttt_eval(targets, llava_rela_att, vid_i, preprocess, contrastive_content, spatial_pred, args, save=False)
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/utils.py", line 207, in ttt_eval
+    bbox_pred_tmp, temporal_pred_tmp, pred_track_ID, pred_actionness, v_iou, gt_viou = evaluation_llava_att(
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/STVG/datasets/evaluation/hcstvg_eval.py", line 262, in evaluation_llava_att
+    proposal_max_v_, proposal_max_frame_ID = torch.max(proposal_llava_pred_max, dim=1)
+IndexError: Dimension out of range (expected to be in range of [-1, 0], but got 1)
+Traceback (most recent call last):
+  File "/gpfs1/scratch/zaiquyang2/mllm/LLaVA-NeXT/custom_infer/STVG/hc_sharegpt4video.py", line 233, in run_inference
+    bbox_pred_tmp, temporal_pred_tmp, _ = st_tuning_module.llava_embedd_tuning(
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/STVG/Sharegpt4video/st_tuning_focus_whole.py", line 164, in llava_embedd_tuning
+    bbox_pred_tmp, temporal_pred_tmp, gt_viou = ttt_eval(targets, llava_rela_att, vid_i, preprocess, contrastive_content, spatial_pred, args, save=False)
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/utils.py", line 207, in ttt_eval
+    bbox_pred_tmp, temporal_pred_tmp, pred_track_ID, pred_actionness, v_iou, gt_viou = evaluation_llava_att(
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/STVG/datasets/evaluation/hcstvg_eval.py", line 262, in evaluation_llava_att
+    proposal_max_v_, proposal_max_frame_ID = torch.max(proposal_llava_pred_max, dim=1)
+IndexError: Dimension out of range (expected to be in range of [-1, 0], but got 1)
+Traceback (most recent call last):
+  File "/gpfs1/scratch/zaiquyang2/mllm/LLaVA-NeXT/custom_infer/STVG/hc_sharegpt4video.py", line 233, in run_inference
+    bbox_pred_tmp, temporal_pred_tmp, _ = st_tuning_module.llava_embedd_tuning(
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/STVG/Sharegpt4video/st_tuning_focus_whole.py", line 164, in llava_embedd_tuning
+    bbox_pred_tmp, temporal_pred_tmp, gt_viou = ttt_eval(targets, llava_rela_att, vid_i, preprocess, contrastive_content, spatial_pred, args, save=False)
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/utils.py", line 207, in ttt_eval
+    bbox_pred_tmp, temporal_pred_tmp, pred_track_ID, pred_actionness, v_iou, gt_viou = evaluation_llava_att(
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/STVG/datasets/evaluation/hcstvg_eval.py", line 262, in evaluation_llava_att
+    proposal_max_v_, proposal_max_frame_ID = torch.max(proposal_llava_pred_max, dim=1)
+IndexError: Dimension out of range (expected to be in range of [-1, 0], but got 1)
+Traceback (most recent call last):
+  File "/gpfs1/scratch/zaiquyang2/mllm/LLaVA-NeXT/custom_infer/STVG/hc_sharegpt4video.py", line 233, in run_inference
+    bbox_pred_tmp, temporal_pred_tmp, _ = st_tuning_module.llava_embedd_tuning(
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/STVG/Sharegpt4video/st_tuning_focus_whole.py", line 164, in llava_embedd_tuning
+    bbox_pred_tmp, temporal_pred_tmp, gt_viou = ttt_eval(targets, llava_rela_att, vid_i, preprocess, contrastive_content, spatial_pred, args, save=False)
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/utils.py", line 207, in ttt_eval
+    bbox_pred_tmp, temporal_pred_tmp, pred_track_ID, pred_actionness, v_iou, gt_viou = evaluation_llava_att(
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/STVG/datasets/evaluation/hcstvg_eval.py", line 262, in evaluation_llava_att
+    proposal_max_v_, proposal_max_frame_ID = torch.max(proposal_llava_pred_max, dim=1)
+IndexError: Dimension out of range (expected to be in range of [-1, 0], but got 1)
+Traceback (most recent call last):
+  File "/gpfs1/scratch/zaiquyang2/mllm/LLaVA-NeXT/custom_infer/STVG/hc_sharegpt4video.py", line 233, in run_inference
+    bbox_pred_tmp, temporal_pred_tmp, _ = st_tuning_module.llava_embedd_tuning(
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/STVG/Sharegpt4video/st_tuning_focus_whole.py", line 164, in llava_embedd_tuning
+    bbox_pred_tmp, temporal_pred_tmp, gt_viou = ttt_eval(targets, llava_rela_att, vid_i, preprocess, contrastive_content, spatial_pred, args, save=False)
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/utils.py", line 207, in ttt_eval
+    bbox_pred_tmp, temporal_pred_tmp, pred_track_ID, pred_actionness, v_iou, gt_viou = evaluation_llava_att(
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/STVG/datasets/evaluation/hcstvg_eval.py", line 262, in evaluation_llava_att
+    proposal_max_v_, proposal_max_frame_ID = torch.max(proposal_llava_pred_max, dim=1)
+IndexError: Dimension out of range (expected to be in range of [-1, 0], but got 1)
+Traceback (most recent call last):
+  File "/gpfs1/scratch/zaiquyang2/mllm/LLaVA-NeXT/custom_infer/STVG/hc_sharegpt4video.py", line 233, in run_inference
+    bbox_pred_tmp, temporal_pred_tmp, _ = st_tuning_module.llava_embedd_tuning(
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/STVG/Sharegpt4video/st_tuning_focus_whole.py", line 164, in llava_embedd_tuning
+    bbox_pred_tmp, temporal_pred_tmp, gt_viou = ttt_eval(targets, llava_rela_att, vid_i, preprocess, contrastive_content, spatial_pred, args, save=False)
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/utils.py", line 207, in ttt_eval
+    bbox_pred_tmp, temporal_pred_tmp, pred_track_ID, pred_actionness, v_iou, gt_viou = evaluation_llava_att(
+  File "/home/zaiquyang2/scratch/mllm/LLaVA-NeXT/custom_infer/STVG/datasets/evaluation/hcstvg_eval.py", line 262, in evaluation_llava_att
+    proposal_max_v_, proposal_max_frame_ID = torch.max(proposal_llava_pred_max, dim=1)
+IndexError: Dimension out of range (expected to be in range of [-1, 0], but got 1)
