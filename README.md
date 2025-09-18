@@ -1,6 +1,11 @@
-### Unleashing the Potential of MLLMs for Zero-Shot Spatio-Temporal Video Grounding
+### MLLMs for STVG, NeurIPS2025
+---
 
-Official code of "Unleashing the Potential of Multimodal LLMs for Zero-Shot Spatio-Temporal Video Grounding", NeurIPS2025
+This is official code of "Unleashing the Potential of Multimodal LLMs for Zero-Shot Spatio-Temporal Video Grounding", NeurIPS2025
+
+Overview
+---
+![aa](./asserts/LlaVa-ZS-STVG.png)
 
 #### TODO
 ---
