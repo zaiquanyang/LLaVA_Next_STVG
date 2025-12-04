@@ -55,7 +55,9 @@ Note that, we save the decomposed attribute and action query by `GPT4-o` in `gpt
 
 ## 💻 Get Started
 
-The inference script is :
+Our method implementation is in the folder `stvg`.
+
+The inference script `run_hcstvg2` is :
 
 ```shell
 idx=-5
