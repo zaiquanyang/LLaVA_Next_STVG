@@ -33,7 +33,7 @@ pip install transformers=4.51.3
 
 ###  Data Preparation
 
-- Download the  generated proposals (about 100GB) for HC-STVG2 videos by SAM2 models at 🤗[hc-stvg2](https://huggingface.co/papers/2509.15178), which include 
+- Download the  generated proposals (about 100GB) for HC-STVG2 videos by SAM2 models at 🤗[hc-stvg2](https://huggingface.co/papers/2509.15178).
 
 The data path should be put in the folder `stvg/data` and look like this:
 
@@ -53,6 +53,7 @@ data/
             ├── llm_decompose_actions.py
             ├── llm_decompose_attr_action.py
             └── proc.py
+└── hc-stvg1/
 ```
 
 Note that, we save the decomposed attribute and action query by `GPT4-o` in `gpt4_decompose_attr_action`.
@@ -66,7 +67,7 @@ Note that, we save the decomposed attribute and action query by `GPT4-o` in `gpt
 
 Our method implementation is in the folder `stvg`.
 
-The inference script `run_hcstvg2` is :
+The inference script `run_hcstvg2.sh` is like:
 
 ```shell
 idx=-5
