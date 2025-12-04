@@ -33,7 +33,7 @@ pip install transformers=4.51.3
 
 ###  Data Preparation
 
-- Download the  generated proposals (about 100GB) for HC-STVG2 videos by SAM2 models at 🤗[hc-stvg2](https://huggingface.co/papers/2509.15178).
+- Download the  generated proposals (about 14GB) for HC-STVG2 videos by SAM2 models at 🤗[hc-stvg2](https://huggingface.co/datasets/zaiquan/llava-stvg-data/tree/main/hc-stvg2).
 
 The data path should be put in the folder `stvg/data` and look like this:
 
