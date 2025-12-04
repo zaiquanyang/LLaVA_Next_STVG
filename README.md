@@ -19,6 +19,15 @@ This paper introduces a training-free framework for zero-shot spatio-temporal vi
 
 ## 💭 Environment
 
+```shell
+conda create -n llava_stvg python=3.11 -y
+conda activate llava_stvg
+pip install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cu121
+pip install -e ".[train]"
+
+pip install transformers=4.51.3 
+
+```
 
 ## 📚 Data  and Models Preparation
 
@@ -140,6 +149,11 @@ Important parameters introduction
 - We thank the excellent open-source codebase like [LLaVA-Next](https://github.com/LLaVA-VL/LLaVA-NeXT), [Transformers](https://github.com/huggingface/transformers) and [SAM2](https://github.com/facebookresearch/sam2).
 - We also thank the previous works including the [mllms_know](https://github.com/saccharomycetes/mllms_know/tree/main),  [ControlMLLM](https://github.com/mrwu-mac/ControlMLLM) and [CG-STVG](https://github.com/HengLan/CGSTVG) which inspire our work.
 
+## 📌 Future Work
+
+- [ ] refine the codebase
+- [ ] Integrate  visualization code.
+- [ ] Integrate the tracking proposals pre-extraction implementation by SAM2.
 
 ## 🍭 Citation
 
