@@ -53,7 +53,7 @@ Note that, we save the decomposed attribute and action query by `GPT4-o` in `gpt
 - Download the Multi-modal LLMs (e.g., 🤗[LLaVA-NeXT-Video-7B-DPO](https://huggingface.co/lmms-lab/LLaVA-NeXT-Video-7B-DPO)). Put it in the `model_zoo/LLaVA-NeXT-Video-7B-DPO`.
 
 
-## 💻 Evaluation
+## 💻 Get Started
 
 The inference script is :
 
@@ -92,9 +92,9 @@ PYTHONPATH="$PWD" CUDA_VISIBLE_DEVICES=0 python3 stvg/hc_llava_next_video.py \
 
 Here, we assign which token by `idx` to achive the attention maps, and we can also implement flexible token choice based on the insight revealed in our work.
 
-**Notes**
+**Notes**: 
 
-- Important parameters introduction
+Important parameters introduction
   - `yes_id` and `no_id`: the token id corresponding to "yes" and "no" in `LLaVA-NeXT-Video`
   - `s_lr` and `t_lr` : learning rate for spatial and temporal prompt tuning
   - `ttt_epoch`: iterations of test-time tuning 
@@ -104,8 +104,7 @@ Here, we assign which token by `idx` to achive the attention maps, and we can al
   - `frames_thre`: predicted interval for temporal grounding evaluation.
 
 
-- ⚡Test-time tuning
-
+### ⚡Test-time tuning
   - In our implementation, we set `s_lr=8.0` and `t_lr=8.0`, and `ttt_epoch=2`, which is enough for most models.
 
   - ⚠️ Our Modifications
