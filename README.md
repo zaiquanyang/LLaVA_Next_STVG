@@ -114,6 +114,7 @@ Important parameters introduction
   - `INPUT.RESOLUTION`: spatial resolution of each frame
   - `mm_spatial_pool_stride`: downsampling visual tokens for efficient memory.
   - `frames_thre`: predicted interval for temporal grounding evaluation.
+  - `llm_infer_mode`: support `base` (baseline) and `focus_attr/focus_act` modes for spatial/temporal tuning.
 
 
 ### ⚡Test-time tuning
