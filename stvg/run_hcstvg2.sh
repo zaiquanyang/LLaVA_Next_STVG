@@ -67,12 +67,3 @@ PYTHONPATH="$PWD" CUDA_VISIBLE_DEVICES=0 python3 stvg/hc_llava_next_video.py \
 
 
 
-
-
-
-# bash custom_infer/STVG/run_hcstvg2.sh model_zoo/LLaVA-NeXT-Video-7B-DPO vicuna_v1 30 4 average no_token True "hhh.mp4"
-
-# srun --partition=stingy --qos=normal --nodes=1 --cpus-per-task=8 --ntasks-per-node=1 --gres=gpu:a100:1 --mem=80G -t 00-01:00:00 --pty bash -i
-# scancel 781131
-# squeue --partition=special_cs
-# squeue -u zaiquyang2
